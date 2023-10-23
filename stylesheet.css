@@ -2,16 +2,16 @@
   font-family: Lora, serif;
   margin: auto;
 }
-#Tennis\ in\ Astana{
+#Tennis\ in\ Astana, #Tennis\ for\ Adults{
   color: white;
   font-size: 20px;
   margin-bottom: 20px;
-
 }
-#Tennis\ for\ Adults{
-  color: white;
-  font-size: 20px;
-  margin-bottom: 20px;
+.tournament{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Lora, serif;
 }
 .Heading{
   display: block;
@@ -19,151 +19,90 @@
   text-align: left;
   margin: 50px 0;
 }
-html {
-  height: 100%;
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+  border-radius: .1em;
+  color: greenyellow;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
 }
 
-body {
-  margin: 0px;
-  height: 100%;
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .75em;
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
   display: flex;
-  align-items: center;
-  align-content: space-around;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
 }
 
-body,
-.example h1,
-.example p,
-.example .button {
-  transition: all .2s ease-in-out;
-}
-
-body.light-theme {
-  background-color: #151515;
-}
-
-body.light-theme .example h1 {
-  color: #FFFFFF;
-}
-
-body.light-theme .example p {
-  color: #FFFFFF;
-}
-
-body.light-theme .buttons .button {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
-}
-
-body.light-theme .buttons .button:hover {
-  color: #151515;
-  background-color: #FFFFFF;
-}
-
-.example {
-  font-family: 'Roboto', sans-serif;
-  width: 550px;
-  height: 378px;
-  margin: auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.example .flipdown {
-  margin: auto;
-}
-
-.example h1 {
-  text-align: center;
-  font-weight: 100;
-  font-size: 3em;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.example p {
-  text-align: center;
-  font-weight: 100;
-  margin-top: 0;
-  margin-bottom: 35px;
-}
-
-.example .buttons {
+.flip-card .top-flip {
+  position: absolute;
   width: 100%;
-  height: 50px;
-  margin: 50px auto 0px auto;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.containers {
   display: flex;
+  gap: .5em;
+  justify-content: center;
+}
+
+.containers-segment {
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
   align-items: center;
-  justify-content: space-around;
 }
 
-.example .buttons p {
-  height: 50px;
-  line-height: 50px;
-  font-weight: 400;
-  padding: 0px 25px 0px 0px;
-  color: #333;
-  margin: 0px;
+.segment {
+  display: flex;
+  gap: .1em;
 }
 
-.example .button {
-  display: inline-block;
-  height: 50px;
-  box-sizing: border-box;
-  line-height: 46px;
-  text-decoration: none;
-  color: #333;
-  padding: 0px 20px;
-  border: solid 2px #333;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: all .2s ease-in-out;
+.segment-title {
+  font-size: 1rem;
 }
-
-.example .button:hover {
-  background-color: #333;
-  color: #FFF;
-}
-
-.example .button i {
-  margin-right: 5px;
-}
-
-@media(max-width: 550px) {
-  .example {
-    width: 100%;
-    height: 362px;
-  }
-
-  .example h1 {
-    font-size: 2.5em;
-  }
-
-  .example p {
-    margin-bottom: 25px;
-  }
-
-  .example .buttons {
-    width: 100%;
-    margin-top: 25px;
-    text-align: center;
-    display: block;
-  }
-
-  .example .buttons p,
-  .example .buttons a {
-    float: none;
-    margin: 0 auto;
-  }
-
-  .example .buttons p {
-    padding-right: 0px;
-  }
-
-  .example .buttons a {
-    display: inline-block;
-  }
-}
-
-
