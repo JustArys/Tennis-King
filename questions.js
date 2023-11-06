@@ -35,12 +35,12 @@ let questions = [
   {
     numb: 4,
     question: "Who is the GOAT",
-    answer: "Abiyev Arystanbek",
+    answer: "Arystanbek Abiyev",
     options: [
       "Rafael Nadal",
-      "Omir Akzhan",
+      "Akzhan Omir",
       "Roger Federer",
-      "Abiyev Arystanbek"
+      "Arystanbek Abiyev"
     ]
   },
   {
