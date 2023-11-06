@@ -1,57 +1,57 @@
 let questions = [
   {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Tennis was invented",
+    answer: "12th century",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "12th century",
+      "13th century",
+      "14th century",
+      "15th century"
     ]
   },
   {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Where was invented",
+    answer: "France",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "France",
+      "Germany",
+      "Kazakhstan",
+      "England"
     ]
   },
   {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "What is the most difficult part of tennis",
+    answer: "2 handed back hand",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "2 handed back hand",
+      "Forehand",
+      "1 handed back hand",
+      "Serve"
     ]
   },
   {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "Who is the GOAT",
+    answer: "Abiyev Arystanbek",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "Rafael Nadal",
+      "Omir Akzhan",
+      "Roger Federer",
+      "Abiyev Arystanbek"
     ]
   },
   {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "What court type is the best",
+    answer: "hard court",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "clay court",
+      "hard court",
+      "grass court",
+      "artifitial grass court"
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
