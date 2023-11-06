@@ -51,28 +51,29 @@
     </form>
   </div>
 </nav>
-<input type="password" name="password" id="pass_log_id" placeholder="password">
-<span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password">Show/Hide</span>
+<div class="col-2 d-flex justify-content-center mt-4">
+  <h2>Set</h2>
+  <div style="width: 20px;"></div>
+  <input id="setConfig" name="setConfig" type="text" class="form-control" placeholder="Time Hours" >
+  <div class="col-lg-5 col-md-5 col-sm-5">
+    <button type="submit" class="btn btn-info"
+            id="submitConfig">Submit</button>
+  </div>
+</div>
 <script>
-  $("body").on('click', '.toggle-password', function() {
-    $(this).toggleClass("fa-eye fa-eye-slash");
-    var input = $("#pass_log_id");
-    if (input.attr("type") === "password") {
-      input.attr("type", "text");
-    } else {
-      input.attr("type", "password");
-    }
+  // Get the button element
+  const button = document.querySelector('#submitConfig');
+
+  // Add a mouseover event listener
+  button.addEventListener('mouseover', () => {
+    // Change the button's background color
+    button.style.backgroundColor = 'blue';
   });
-</script>
-<input id="accept" name="accept" type="checkbox" value="y"/>I accept<br>
-<input id="submitbtn" disabled="disabled" name="Submit" type="submit" value="Submit" />
-<script>
-  $('#accept').click(function() {
-    if ($('#submitbtn').is(':disabled')) {
-      $('#submitbtn').removeAttr('disabled');
-    } else {
-      $('#submitbtn').attr('disabled', 'disabled');
-    }
+
+  // Add a mouseout event listener
+  button.addEventListener('mouseout', () => {
+    // Change the button's background color back to its original color
+    button.style.backgroundColor = '';
   });
 </script>
 <h1 class="tournament">Until new tournament</h1>
@@ -277,7 +278,43 @@
     }
   });
 </script>
+<canvas id="myChart"></canvas>
+<script>new Chart($("#myChart"), {
+  type: "bar",
+  data: {
+    labels: ["Ace", "Double Fault", "Unforced Error", "Winner"],
+    datasets: [{
+      label: "Tennis Statistics",
+      data: [10, 2, 5, 15]
+    }]
+  },
+  options: {}
+});
+</script>
+<canvas id="ChartTennis"></canvas>
+<script>
+  new Chart($("#ChartTennis"), {
+      type: "pie",
+      data: {
+        labels: [
+          'Back-Hand',
+          'Fore-Hand',
+          'Serve'
+        ],
+        datasets: [{
+          label: "Most Error things",
+          data: [300, 50, 100],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+          ],
+          hoverOffset: 4
+        }]
+      },
+  });
 
+</script>
 </body>
 <footer class="py-5" onload='document.email.focus()'>
   <div class="row">
